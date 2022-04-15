@@ -1,0 +1,13 @@
+<div class="card flow">
+    <img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" class="card__img">
+    <h3 class="card__title">
+        {{ post.data.title }}
+    </h3>
+    <p class="card__meta">
+        by {{ post.data.author }} on {{ post.data.date | postDate }}
+    </p>
+    <p class="card__body">
+        {{ post.data.description }}
+    </p>
+    <a href="{{ post.url }}" class="card__link">Read more</a>
+</div>
