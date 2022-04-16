@@ -214,14 +214,57 @@
                 <button class="tablinks" onclick="openTab(event, 'address')">Address</button>
                 <button class="tablinks" onclick="openTab(event, 'map')">Site Map</button>
             </div>
-            <div id="contact-form" class="tab__content">
+            <div id="contact-form" class="tab__content flow">
                 <h3>Contact</h3>
+                <form action="https://formsubmit.co/dostonnabotov@email.com" method="POST">
+                    <label for="name">Name:
+                        <span class="mandatory">*</span>
+                    </label>
+                    <input type="text" id="name" name="name" placeholder="Your name.." required>
+                    <label for="email">Email:
+                        <span class="mandatory">*</span>
+                    </label>
+                    <input type="email" id="email" name="email" placeholder="Your last name.." required>
+                    <label for="topic">Topic:
+                        <span class="mandatory">*</span>
+                    </label>
+                    <select id="topic" name="topic" required>
+                        <option value="select"></option>
+                        <option value="feedback">Feedback</option>
+                        <option value="problem">Problem</option>
+                        <option value="donation">Donation</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <label for="subject">Subject:
+                        <span class="mandatory">*</span>
+                    </label>
+                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px" required></textarea>
+                    <input type="submit" value="Submit">
+                </form>
             </div>
-            <div id="address" class="tab__content">
+            <div id="address" class="tab__content flow">
                 <h3>Address</h3>
+                <address class="flow">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:kamolzaripov91@gmail.com">kamolzaripov91@gmail.com</a>
+                    <br>
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+998972807977">(+998) 97 280 79 77</a>
+                    <br>
+                    <i class="fas fa-location-dot"></i>
+                    <span>4th floor, Main Building, Oil and Refinery College, Bukhara</span>
+                </address>
             </div>
-            <div id="map" class="tab__content">
-                <h3>Map</h3>
+            <div id="map" class="tab__content flow">
+                <h3>Site Map</h3>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3067.062046768445!2d64.41112924926628!3d39.76071529318821!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f50061463c592d7%3A0xc53d87b7b644796f!2sNeft%20Va%20Gaz%20Kollej!5e0!3m2!1sen!2slv!4v1650099456347!5m2!1sen!2slv"
+                    width="800"
+                    height="600"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </div>
