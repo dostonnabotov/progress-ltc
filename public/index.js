@@ -1,9 +1,7 @@
 document.getElementById("year").innerHTML = new Date().getFullYear();
 function openTab(evt, tabName) {
     // Declare all variables
-    var i,
-        tabContent,
-        tablinks;
+    var i, tabContent, tablinks;
     // Get all elements with class="tab__content" and hide them
     tabContent = document.getElementsByClassName("tab__content");
     for (i = 0; i < tabContent.length; i++) {

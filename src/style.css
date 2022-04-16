@@ -666,6 +666,14 @@ details[open] summary i {
     text-align: center;
 }
 
-.footer ul {
+.footer nav {
     justify-content: center;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 28rem) {
+    .footer nav {
+        flex-direction: row;
+    }
 }
