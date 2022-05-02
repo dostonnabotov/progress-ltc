@@ -1,0 +1,97 @@
+@use "../abstracts" as *;
+
+#header {
+  background-color: var(--clr-neutral-800);
+  position: relative;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: var(--clr-neutral-100);
+
+  padding-block: 0.7rem;
+}
+
+.logo-brand {
+  text-decoration: none;
+  font-size: var(--fs-500);
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+.nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+
+  display: none;
+
+  text-align: center;
+  background-color: hsl(0 0% 0% / 0.8);
+  z-index: 10;
+
+  & > ul {
+    display: flex;
+    flex-direction: column;
+
+    & li:where(:not(:first-child)) {
+      margin-top: 0.5rem;
+    }
+
+    & li a {
+      font-weight: var(--fw-500);
+      text-transform: uppercase;
+    }
+  }
+
+  @include md("medium") {
+    all: unset;
+
+    & > ul {
+      align-items: center;
+      flex-direction: row;
+
+      --gap: 2rem;
+
+      & li {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.toggle:checked {
+  & ~ .nav {
+    display: block;
+  }
+  & ~ .toggle-label .fa-bars {
+    display: none;
+  }
+
+  & ~ .toggle-label .fa-times {
+    display: inline-block;
+  }
+}
+
+.fa-times {
+  display: none;
+}
+
+.toggle-label {
+  cursor: pointer;
+
+  & > i {
+    font-size: 1.5rem;
+  }
+
+  @include md("medium") {
+    display: none;
+  }
+}

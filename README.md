@@ -1,3 +1,3 @@
 # Progress LTC
 
-### Built with Nunjucks
+### Built with Sass, CMS and Nunjucks

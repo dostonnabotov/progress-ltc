@@ -1,0 +1,86 @@
+@use "../abstracts" as *;
+
+section {
+  padding-block: 4rem;
+
+  &:not(#welcome) {
+    min-height: 100vh;
+  }
+}
+
+.section__title--left {
+  text-align: left;
+  margin-bottom: 1rem;
+  position: relative;
+  color: var(--clr-primary);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: 0;
+    bottom: 100%;
+    width: 60px;
+    height: 3px;
+    background-color: var(--clr-primary);
+  }
+}
+
+#about {
+  background-color: var(--clr-neutral-200);
+}
+
+.about__body {
+  margin-block: 2rem;
+  display: grid;
+  gap: 4rem;
+
+  @include md("medium") {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/*=============
+    faq 
+===============*/
+#faq {
+  background-color: var(--clr-neutral-200);
+}
+details {
+  width: min(90%, 45rem);
+  margin: 0.8rem auto;
+}
+
+details > *:where(:not(:first-child)) {
+  padding-block-start: var(--spacer);
+}
+
+summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0.7rem 0.8rem;
+
+  background-color: var(--clr-neutral-100);
+
+  cursor: pointer;
+  text-decoration: none;
+  list-style: none;
+  border-radius: var(--br);
+  &:hover {
+    color: var(--clr-primary);
+  }
+
+  & i {
+    transition: transform 100ms ease-in-out;
+  }
+}
+
+details[open] summary {
+  font-weight: var(--fw-700);
+
+  & i {
+    transform: rotate(-180deg);
+  }
+}

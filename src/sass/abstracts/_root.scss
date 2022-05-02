@@ -1,0 +1,42 @@
+@use './mixins' as *;
+
+/*=============
+    Google Fonts - Roboto (400, 500, 700)
+===============*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+    --clr-primary: #0066ff;
+    --clr-neutral-100: #FFF;
+    --clr-neutral-200: #eeecec;
+    --clr-neutral-300: #c4c2c2;
+    --clr-neutral-400: #777;
+    --clr-neutral-500: #666;
+    --clr-neutral-600: #555;
+    --clr-neutral-700: #444;
+    --clr-neutral-800: #333;
+    --clr-neutral-900: #000;
+
+    --ff-body: 'Roboto', sans-serif;
+    --fs-300: 0.8rem;
+    --fs-400: 1rem;
+    --fs-500: 1.7rem;
+    --fs-700: 2rem;
+    --fs-900: 2.5rem;
+
+    --fw-400: 400;
+    --fw-500: 500;
+    --fw-700: 700;
+
+    --br: 5px;
+
+    --spacer: 1rem;
+
+    @include md('medium') {
+        --fs-300: 1rem;
+        --fs-400: 1.125rem;
+        --fs-500: 2rem;
+        --fs-700: 3rem;
+        --fs-900: 4.5rem;
+    }
+}
