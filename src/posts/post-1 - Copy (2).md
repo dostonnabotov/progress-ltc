@@ -1,9 +1,12 @@
 ---
-title: First Post
-author: Doston Nabotov
-date: 2022-04-01
+title: Why do so many people do the IELTS exam again and again? If you don't get
+  what you need, why take it multiple times so soon?
+author: Kamol Zaripov
+date: 2022-05-12T21:00:00.000Z
 tags: featured
-description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nisi deserunt accusantium similique obcaecati, consectetur soluta fugiat dolore recusandae quos
+description: In my experience of working with International students, there is a
+  substantial minority of them who think of the IELTS test as being rather like
+  throwing dice when playing a board game.
 image: /./assets/books.jpg
 imageAlt: Books
 ---
