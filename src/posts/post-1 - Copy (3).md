@@ -2,7 +2,7 @@
 title: I just received my IELTS results, and I scored a band 7.0 listening 6.5,
   reading, 7.0, writing, 7.0, and speaking 7.5. Can I study in the UK with this?
 author: Kamol Zaripov
-date: 2022-04-01
+date: 2022-05-13T21:00:00.000Z
 tags: featured
 description: Well, as an English qualification it would be fine, no problem at
   all. Most UK universities want a minimum of 6.5 overall, which is roughly
