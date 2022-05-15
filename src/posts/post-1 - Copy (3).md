@@ -10,7 +10,7 @@ description: Well, as an English qualification it would be fine, no problem at
   just the basic language qualification. Nobody in the UK goes to university
   just because they've managed to pass GCSE English.
 image: /assets/students.jpg
-imageAlt: Books
+imageAlt: Students
 ---
 
 First Post Content
