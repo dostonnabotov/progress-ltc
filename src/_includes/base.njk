@@ -1,36 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-            integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"/>
-        <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
-        <title>{{ title }}</title>
-    </head>
-    <body>
-        {% include 'header.njk' %}
-        <main>
-            {{ content | safe }}
-        </main>
-        {% include 'footer.njk' %}
-        <script src="/index.js"></script>
-        <script>
-            if (window.netlifyIdentity) {
-                window.netlifyIdentity.on("init", user => {
-                    if (!user) {
-                        window.netlifyIdentity.on("login", () => {
-                            document.location.href = "/admin/";
-                        });
-                    }
-                });
-            }
-        </script>
-    </body>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Doston Nabotov">
+    <meta name="keywords" content="Progress LTC, IELTS, CEFR, Tutorial, English learning">
+    <meta
+      name="description"
+      content="Progress LTC is an educational center for English learners, who to improve their English skill to the next,
+        apply for international exams, like IELTS, TOEFL and also national exam, CEFR.">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
+    <title>{{ title }}</title>
+  </head>
+  <body>
+    {% include 'header.njk' %}
+    <main>
+      {{ content | safe }}
+    </main>
+    {% include 'footer.njk' %}
+    <script src="/index.js"></script>
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+  </body>
 </html>
