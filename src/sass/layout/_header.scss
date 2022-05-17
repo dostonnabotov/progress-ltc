@@ -33,12 +33,11 @@
   left: 0;
   right: 0;
 
-  // display: none;
+  display: none;
 
   text-align: center;
   background-color: #222;
-  transform: translateX(100%);
-  transition: transform 250ms linear;
+  transition: display 250ms linear;
   z-index: 1000;
 
   & > ul {
@@ -73,8 +72,7 @@
 
 .toggle:checked {
   & ~ .nav {
-    transform: translateX(0);
-    // display: block;
+    display: block;
   }
   & ~ .toggle-label .fa-bars {
     display: none;
