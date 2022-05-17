@@ -1,0 +1,237 @@
+@use "../abstracts" as *;
+
+/* ============
+    Section
+============ */
+section {
+  padding-block: 4rem;
+
+  &:not(#welcome) {
+    min-height: 100vh;
+  }
+}
+
+.section__title {
+  margin-block: 2rem;
+}
+
+.section__title--left {
+  text-align: left;
+  margin-bottom: 1rem;
+  color: var(--clr-primary);
+}
+
+/* ============
+    About
+============ */
+#about {
+  background-color: var(--clr-neutral-200);
+}
+
+.about__body {
+  margin-block: 2rem;
+  display: grid;
+  gap: 4rem;
+
+  @include md("medium") {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ============
+    FAQ
+============ */
+#faq {
+  background-color: var(--clr-neutral-200);
+}
+details {
+  width: min(90%, 45rem);
+  margin: 0.8rem auto;
+}
+
+details > *:where(:not(:first-child)) {
+  padding-block-start: var(--spacer);
+}
+
+summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0.7rem 0.8rem;
+
+  background-color: var(--clr-neutral-100);
+
+  cursor: pointer;
+  text-decoration: none;
+  list-style: none;
+  border-radius: var(--br);
+  &:hover {
+    color: var(--clr-primary);
+  }
+
+  & i {
+    transition: transform 100ms ease-in-out;
+  }
+}
+
+details[open] summary {
+  font-weight: var(--fw-700);
+
+  & i {
+    transform: rotate(-180deg);
+  }
+}
+
+/* ============
+    IELTS
+============ */
+.ielts__parts {
+  display: grid;
+  gap: 2rem;
+  margin-block: 2rem;
+  text-align: center;
+
+  @include md("medium") {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.ielts__part {
+  width: min(100% - 1rem, 30rem);
+  margin-inline: auto;
+  height: 100%;
+  padding: 1rem 2rem;
+
+  background-color: #fff;
+
+  border-radius: var(--br);
+  border: 1px solid #f2f2f2;
+  transition: 0.3s;
+
+  &:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  & > i {
+    color: var(--clr-primary);
+    font-size: 3rem;
+  }
+}
+
+/* ============
+    Blog
+============ */
+.cards {
+  display: grid;
+  gap: 2rem;
+  margin-top: 2rem;
+
+  @include md("medium") {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.card {
+  width: min(100%, 25rem);
+
+  margin: 2rem auto;
+  padding-bottom: 0.7rem;
+
+  border-radius: var(--br);
+  box-shadow: 0 0 7px -4px #333;
+
+  & > *:where(:not(:first-child)) {
+    padding-inline: 0.7rem;
+  }
+
+  &__title {
+    color: var(--clr-primary);
+  }
+
+  &__meta,
+  &__body,
+  &__link {
+    font-size: var(--fs-300);
+  }
+
+  &__meta {
+    color: var(--clr-neutral-500);
+  }
+
+  &__body {
+    color: var(--clr-neutral-700);
+  }
+
+  &__link {
+    display: inline-block;
+    color: red;
+  }
+}
+
+/* ============
+    Contact
+============ */
+.tabs {
+  margin-block: 3rem;
+}
+
+.tab {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  background-color: #f1f1f1;
+
+  & button {
+    width: 100%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+  }
+
+  & button:hover {
+    background-color: #ddd;
+  }
+
+  & button.active {
+    background-color: #ccc;
+  }
+
+  &__content {
+    display: none;
+    padding: 1rem;
+  }
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+.mandatory {
+  color: red;
+}
+
+.map {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+
+  & iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+}

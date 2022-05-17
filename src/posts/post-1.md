@@ -1,21 +1,26 @@
 ---
-title: First Post
+title: A Blog Post
 author: Doston Nabotov
-date: 2022-04-01
+date: 2022-05-17
 tags: featured
-description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nisi deserunt accusantium similique obcaecati, consectetur soluta fugiat dolore recusandae quos
+description: A blog post is any article, news piece, or guide that's published in the blog section of a website. A blog post typically covers a specific topic or query, is educational in nature, ranges from 600 to 2,000+ words, and contains other media types such as images, videos, infographics, and interactive charts.
 image: /./assets/books.jpg
 imageAlt: Books
 ---
 
-First Post Content
+## What Is A Blog Post?
 
-Eum dolores repellendus qui veritatis corrupti et ipsam eaque et laborum vitae qui quia voluptatem? Sed consequuntur beatae est quos ducimus ad animi neque. Aut minima excepturi 33 perferendis error ab rerum dolorem? Est reprehenderit quos qui molestiae voluptatem ut perferendis eaque.
+A blog post is any article, news piece, or guide that's published in the blog section of a website. A blog post typically covers a specific topic or query, is educational in nature, ranges from 600 to 2,000+ words, and contains other media types such as images, videos, infographics, and interactive charts.
 
-Eum dolores repellendus qui veritatis corrupti et ipsam eaque et laborum vitae qui quia voluptatem? Sed consequuntur beatae est quos ducimus ad animi neque. Aut minima excepturi 33 perferendis error ab rerum dolorem? Est reprehenderit quos qui molestiae voluptatem ut perferendis eaque.
+Blog posts allow you and your business to publish insights, thoughts, and stories on your website about any topic. They can help you boost brand awareness, credibility, conversions, and revenue. Most importantly, they can help you drive traffic to your website.
 
-Eum dolores repellendus qui veritatis corrupti et ipsam eaque et laborum vitae qui quia voluptatem? Sed consequuntur beatae est quos ducimus ad animi neque. Aut minima excepturi 33 perferendis error ab rerum dolorem? Est reprehenderit quos qui molestiae voluptatem ut perferendis eaque.
+## Quick Blog Writing Tips
 
-Eum dolores repellendus qui veritatis corrupti et ipsam eaque et laborum vitae qui quia voluptatem? Sed consequuntur beatae est quos ducimus ad animi neque. Aut minima excepturi 33 perferendis error ab rerum dolorem? Est reprehenderit quos qui molestiae voluptatem ut perferendis eaque.
-
-Eum dolores repellendus qui veritatis corrupti et ipsam eaque et laborum vitae qui quia voluptatem? Sed consequuntur beatae est quos ducimus ad animi neque. Aut minima excepturi 33 perferendis error ab rerum dolorem? Est reprehenderit quos qui molestiae voluptatem ut perferendis eaque.
+- Conduct research if necessary to convey your point.
+- Make your content skimmable; break it into digestible chunks.
+- Include interesting quotes or facts for emphasis on the subject.
+- Paint a full picture with images, graphics or video.
+- Use Grammarly to catch mistakes.
+- If you don’t know where to start, start by telling a story.
+- Reference social media posts.
+- Each sentence should convey a single idea.

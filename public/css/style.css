@@ -4,7 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 :root {
   --clr-primary: #0066ff;
-  --clr-neutral-100: #FFF;
+  --clr-neutral-100: #fff;
   --clr-neutral-200: #eeecec;
   --clr-neutral-300: #c4c2c2;
   --clr-neutral-400: #777;
@@ -84,8 +84,7 @@ h3 {
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
-  -webkit-text-decoration-skip: ink;
-          text-decoration-skip-ink: auto;
+  text-decoration-skip-ink: auto;
 }
 
 /* Make images easier to work with */
@@ -112,10 +111,8 @@ select {
   *,
 *::before,
 *::after {
-    -webkit-animation-duration: 0.01ms !important;
-            animation-duration: 0.01ms !important;
-    -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
@@ -142,6 +139,7 @@ p + p {
 }
 
 body {
+  overflow-x: hidden;
   font-family: var(--ff-body);
   font-size: var(--fs-400);
   font-weight: var(--fw-400);
@@ -175,9 +173,8 @@ body {
 /* buttons */
 .btn {
   display: inline-block;
-  padding: 0.5rem 1rem;
+  padding: 0.4em 1.5em;
   text-transform: uppercase;
-  font-size: 1rem;
   font-weight: var(--fw-500);
   text-decoration: none;
   border: 0;
@@ -189,9 +186,7 @@ body {
   outline: 1px solid transparent;
 }
 .btn-primary:hover, .btn-primary:focus {
-  color: var(--clr-primary);
-  background-color: var(--clr-neutral-100);
-  outline: 1px solid var(--clr-primary);
+  background-color: #045aaf;
 }
 .btn-outline {
   color: var(--clr-primary);
@@ -239,8 +234,6 @@ body {
   margin-inline: auto;
   font-size: var(--fs-500);
   position: relative;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
 }
 .main__title--left {
@@ -260,6 +253,7 @@ body {
 #header {
   background-color: var(--clr-neutral-800);
   position: relative;
+  z-index: 0;
 }
 
 .header {
@@ -279,14 +273,16 @@ body {
 }
 
 .nav {
+  overflow-x: hidden;
   position: absolute;
   top: 100%;
   left: 0;
   right: 0;
-  display: none;
   text-align: center;
-  background-color: hsla(0deg, 0%, 0%, 0.8);
-  z-index: 10;
+  background-color: #222;
+  transform: translateX(100%);
+  transition: transform 250ms linear;
+  z-index: 1000;
 }
 .nav > ul {
   display: flex;
@@ -314,7 +310,7 @@ body {
 }
 
 .toggle:checked ~ .nav {
-  display: block;
+  transform: translateX(0);
 }
 .toggle:checked ~ .toggle-label .fa-bars {
   display: none;
@@ -339,6 +335,88 @@ body {
   }
 }
 
+/* ============
+    Section
+============ */
+section {
+  padding-block: 4rem;
+}
+section:not(#welcome) {
+  min-height: 100vh;
+}
+
+.section__title {
+  margin-block: 2rem;
+}
+
+.section__title--left {
+  text-align: left;
+  margin-bottom: 1rem;
+  color: var(--clr-primary);
+}
+
+/* ============
+    About
+============ */
+#about {
+  background-color: var(--clr-neutral-200);
+}
+
+.about__body {
+  margin-block: 2rem;
+  display: grid;
+  gap: 4rem;
+}
+@media (min-width: 50em) {
+  .about__body {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ============
+    FAQ
+============ */
+#faq {
+  background-color: var(--clr-neutral-200);
+}
+
+details {
+  width: min(90%, 45rem);
+  margin: 0.8rem auto;
+}
+
+details > *:where(:not(:first-child)) {
+  padding-block-start: var(--spacer);
+}
+
+summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 0.8rem;
+  background-color: var(--clr-neutral-100);
+  cursor: pointer;
+  text-decoration: none;
+  list-style: none;
+  border-radius: var(--br);
+}
+summary:hover {
+  color: var(--clr-primary);
+}
+summary i {
+  transition: transform 100ms ease-in-out;
+}
+
+details[open] summary {
+  font-weight: var(--fw-700);
+}
+details[open] summary i {
+  transform: rotate(-180deg);
+}
+
+/* ============
+    IELTS
+============ */
 .ielts__parts {
   display: grid;
   gap: 2rem;
@@ -369,6 +447,9 @@ body {
   font-size: 3rem;
 }
 
+/* ============
+    Blog
+============ */
 .cards {
   display: grid;
   gap: 2rem;
@@ -376,7 +457,7 @@ body {
 }
 @media (min-width: 50em) {
   .cards {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -407,6 +488,9 @@ body {
   color: red;
 }
 
+/* ============
+    Contact
+============ */
 .tabs {
   margin-block: 3rem;
 }
@@ -466,87 +550,6 @@ textarea {
   position: absolute;
 }
 
-section {
-  padding-block: 4rem;
-}
-section:not(#welcome) {
-  min-height: 100vh;
-}
-
-.section__title--left {
-  text-align: left;
-  margin-bottom: 1rem;
-  position: relative;
-  color: var(--clr-primary);
-}
-.section__title--left::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: 0;
-  bottom: 100%;
-  width: 60px;
-  height: 3px;
-  background-color: var(--clr-primary);
-}
-
-#about {
-  background-color: var(--clr-neutral-200);
-}
-
-.about__body {
-  margin-block: 2rem;
-  display: grid;
-  gap: 4rem;
-}
-@media (min-width: 50em) {
-  .about__body {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-/*=============
-    faq 
-===============*/
-#faq {
-  background-color: var(--clr-neutral-200);
-}
-
-details {
-  width: min(90%, 45rem);
-  margin: 0.8rem auto;
-}
-
-details > *:where(:not(:first-child)) {
-  -webkit-padding-before: var(--spacer);
-          padding-block-start: var(--spacer);
-}
-
-summary {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.7rem 0.8rem;
-  background-color: var(--clr-neutral-100);
-  cursor: pointer;
-  text-decoration: none;
-  list-style: none;
-  border-radius: var(--br);
-}
-summary:hover {
-  color: var(--clr-primary);
-}
-summary i {
-  transition: transform 100ms ease-in-out;
-}
-
-details[open] summary {
-  font-weight: var(--fw-700);
-}
-details[open] summary i {
-  transform: rotate(-180deg);
-}
-
 #footer {
   background-color: var(--clr-neutral-800);
   color: var(--clr-neutral-100);
@@ -565,4 +568,6 @@ details[open] summary i {
   .footer nav {
     flex-direction: row;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
