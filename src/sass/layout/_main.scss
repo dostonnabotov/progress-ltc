@@ -145,8 +145,14 @@ details[open] summary {
     padding-inline: 0.7rem;
   }
 
-  &__title {
+  &__title > a {
     color: var(--clr-primary);
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
   }
 
   &__meta,

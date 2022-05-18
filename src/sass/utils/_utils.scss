@@ -4,6 +4,11 @@
   margin-inline: auto;
 }
 
+.container--narrow {
+  width: min(100% - 2rem, 50rem);
+  margin-inline: auto;
+}
+
 .flow > *:where(:not(:first-child)) {
   margin-top: 1rem;
 }

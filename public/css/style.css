@@ -152,6 +152,11 @@ body {
   margin-inline: auto;
 }
 
+.container--narrow {
+  width: min(100% - 2rem, 50rem);
+  margin-inline: auto;
+}
+
 .flow > *:where(:not(:first-child)) {
   margin-top: 1rem;
 }
@@ -471,8 +476,12 @@ details[open] summary i {
 .card > *:where(:not(:first-child)) {
   padding-inline: 0.7rem;
 }
-.card__title {
+.card__title > a {
   color: var(--clr-primary);
+  text-decoration: none;
+}
+.card__title > a:hover, .card__title > a:focus {
+  text-decoration: underline;
 }
 .card__meta, .card__body, .card__link {
   font-size: var(--fs-300);
