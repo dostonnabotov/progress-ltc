@@ -1,42 +1,79 @@
 @use "./mixins" as *;
 
-/*=============
-    Google Fonts - Roboto (400, 500, 700)
-===============*/
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
-
 :root {
-  --clr-primary: #0066ff;
-  --clr-neutral-100: #fff;
-  --clr-neutral-200: #eeecec;
-  --clr-neutral-300: #c4c2c2;
-  --clr-neutral-400: #777;
-  --clr-neutral-500: #666;
-  --clr-neutral-600: #555;
-  --clr-neutral-700: #444;
-  --clr-neutral-800: #333;
-  --clr-neutral-900: #000;
+  --clr-primary: hsl(216, 100%, 50%);
 
-  --ff-body: "Roboto", sans-serif;
-  --fs-300: 0.8rem;
+  --ff-body: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --ff-heading: Arial, Helvetica, sans-serif;
+
   --fs-400: 1rem;
-  --fs-500: 1.7rem;
-  --fs-700: 2rem;
-  --fs-900: 2.5rem;
-
-  --fw-400: 400;
-  --fw-500: 500;
-  --fw-700: 700;
-
-  --br: 5px;
-
-  --spacer: 1rem;
+  --fs-500: 1.4rem;
+  --fs-700: 1.7rem;
+  --fs-900: 2.3rem;
 
   @include md("medium") {
-    --fs-300: 1rem;
     --fs-400: 1.125rem;
-    --fs-500: 2rem;
-    --fs-700: 3rem;
-    --fs-900: 4.5rem;
+    --fs-500: 1.8rem;
+    --fs-700: 2rem;
+    --fs-900: 3rem;
+  }
+}
+
+$font-sizes: (
+  400: var(--fs-400),
+  500: var(--fs-500),
+  700: var(--fs-700),
+  900: var(--fs-900),
+);
+
+$font-weights: (
+  400: 400,
+  700: 600,
+  900: 700,
+);
+
+$font-colors: (
+  primary: hsl(216, 100%, 50%),
+);
+
+$neutral: (
+  100: hsl(0, 0%, 100%),
+  400: hsl(0, 0%, 27%),
+  700: hsl(0, 1%, 16%),
+);
+
+@function neutral($value) {
+  @return map-get($neutral, $value);
+}
+
+@function fs($value) {
+  @return map-get($font-sizes, $value);
+}
+
+@function fw($value) {
+  @return map-get($font-weights, $value);
+}
+
+@each $shade, $value in $font-sizes {
+  .fs-#{$shade} {
+    font-size: $value;
+  }
+}
+
+@each $shade, $value in $font-weights {
+  .fw-#{$shade} {
+    font-weight: $value;
+  }
+}
+
+@each $shade, $value in $neutral {
+  .neutral-#{$shade} {
+    color: $value;
+  }
+}
+
+@each $shade, $value in $font-colors {
+  .text-#{$shade} {
+    color: $value;
   }
 }

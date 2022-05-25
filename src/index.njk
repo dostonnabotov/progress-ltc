@@ -4,19 +4,19 @@ layout: 'base.njk'
 ---
 
 <!-- welcome -->
-<section id="welcome">
+<div id="welcome">
   <div class="welcome container">
-    <h2 class="section__title section__title--left">Welcome to Progress LTC</h2>
-    <p class="main__body">Progress LTC is your number one source for mastering English language. We're dedicated to giving
-      you the very best of education, with a focus on bright future. We hope you enjoy our tutorial as much as we enjoy
-      offering them to you. Thanks For Visiting Our Site</p>
+    <h1 class="fs-900 fw-900 text-primary">Welcome to Progress LTC</h1>
+    <p>Progress LTC is your number one source for mastering English language. We're dedicated to giving you the very best of
+      education, with a focus on bright future. We hope you enjoy our tutorial as much as we enjoy offering them to you.
+      Thanks For Visiting Our Site</p>
   </div>
-</section>
+</div>
 <!-- ielts -->
 <section id="ielts">
   <div class="ielts container">
     <h2 class="section__title">IELTS</h2>
-    <p class="section__subtitle">Everything you need to know as you get started with IELTS</p>
+    <h4 class="section__subtitle">Everything you need to know as you get started with IELTS</h4>
     <!-- wrapper 1 -->
     <div class="ielts__parts grid">
       <div class="ielts__part listening flow">
@@ -50,7 +50,7 @@ layout: 'base.njk'
 <section id="blog">
   <div class="blog container">
     <h2 class="section__title">Featured Articles</h2>
-    <p class="section__subtitle">Interested in our articles? or Wanna know about our students' success stories?</p>
+    <h4 class="section__subtitle">Interested in our articles? or Wanna know about our students' success stories?</h4>
     <!-- cards -->
     <div class="cards">
       {% for post in collections.featured | reverse %}
@@ -64,7 +64,7 @@ layout: 'base.njk'
 <section id="faq">
   <div class="faq container">
     <h2 class="section__title">FAQ</h2>
-    <p class="section__subtitle" style="margin-bottom: 3em;">Have a urgent question? Check out our FAQs</p>
+    <h4 class="section__subtitle" style="margin-bottom: 3em;">Have a urgent question? Check out our FAQs</h4>
     <details>
       <summary>How can I sign up for the tutorial?
         <i class="fas fa-chevron-down"></i>

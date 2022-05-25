@@ -3,9 +3,20 @@
 body {
   overflow-x: hidden;
   font-family: var(--ff-body);
-  font-size: var(--fs-400);
-  font-weight: var(--fw-400);
+  font-size: fs(400);
+  font-weight: fw(400);
+  line-height: 1.6;
 
-  --clr-body: var(--clr-neutral-800);
-  color: var(--clr-body);
+  color: neutral(400);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--ff-heading);
+  line-height: 1.1;
+}
+
+p:not([class]) {
+  max-width: 70ch;
 }
