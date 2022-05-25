@@ -6,9 +6,13 @@
 section {
   padding-block: 4rem;
 
-  &:not(#welcome) {
+  & {
     min-height: 100vh;
   }
+}
+
+#welcome {
+  padding-block: 4rem;
 }
 
 .section__title {

@@ -25,48 +25,53 @@
     <title>A Blog Post</title>
   </head>
   <body>
-    <!-- header -->
-<header id="header">
-  <div class="header container">
-    <a href="/" class="fs-700 fw-900">Progress</a>
-    <button class="mobile-nav-toggle" aria-controls="primary-nav">
-      <span class="sr-only" aria-expanded="false">Menu</span>
-    </button>
-    <input type="checkbox" name="toggle" class="toggle" id="toggle" style="display: none;">
-      <nav>
-        <ul class="primary-nav flex" id="primary-nav">
+    <header id="header">
+  <div>
+    <h1>
+      <a href="/">Progress LTC</a>
+    </h1>
+  </div>
+  <button class="mobile-nav-toggle" aria-controls="primary-nav">
+    <span class="sr-only" aria-expanded="false">Menu</span>
+  </button>
+  <nav>
+    <ul id="primary-nav" class="primary-nav" data-visible="false" role="list">
+      <li class="dropdown">
+        <button class="dropdown__btn">
+          <span>Home</span>
+          <i class="fas fa-angle-down"></i>
+        </button>
+        <ul class="dropdown__content" role="list">
           <li>
-            <a class="fw-700" href="/pages/about">About</a>
+            <a href="/#ielts">IELTS</a>
           </li>
           <li>
-            <a class="fw-700" href="/#ielts">IELTS</a>
+            <a href="/#faq">FAQ</a>
           </li>
           <li>
-            <a class="fw-700" href="/#blog">Articles</a>
-          </li>
-          <li>
-            <a class="fw-700" href="/pages/blog">Blog</a>
-          </li>
-          <li>
-            <a class="fw-700" href="/#faq">FAQ</a>
-          </li>
-          <li>
-            <a class="fw-700" href="/pages/contact">Contact</a>
+            <a href="/#blog">Articles</a>
           </li>
         </ul>
-      </nav>
-      <label for="toggle" class="toggle-label">
-        <i class="fas fa-bars"></i>
-      </label>
-    </div>
-  </header>
+      </li>
+      <li>
+        <a href="/pages/about">About</a>
+      </li>
+      <li>
+        <a href="/pages/blog">Blog</a>
+      </li>
+      <li>
+        <a href="/pages/contact">Contact</a>
+      </li>
+    </ul>
+  </nav>
+</header>
     <main>
       
 <section>
     <article class="container--narrow flow">
         <h2 class="article__title">A Blog Post</h2>
         <figure>
-            <img loading="lazy" src="/./assets/books.jpg" alt="Books">
+            <img loading="lazy" src="/assets/posts/books.jpg" alt="Books">
             <figcaption style="text-align: center;">
                 <i>Books</i>
             </figcaption>
@@ -92,7 +97,7 @@
     <!-- footer -->
 <footer id="footer">
     <div class="footer container flow">
-        <p>Follow us anywhere in the web:</p>
+        <p class="text-center">Follow us anywhere in the web:</p>
         <nav class="flex">
             <a
                 href="https://m.facebook.com/home.php#!https://m.facebook.com/groups/400138937513273/permalink/832188894308273/?refid=28&_ft_=qid.6943109376465658938%3Amf_story_key.-7502367648317176323%3Atop_level_post_id.10225478119682222%3Acontent_owner_id_new.1302822440%3Aoriginal_content_id.832188894308273%3Aoriginal_content_owner_id.100014615285956%3Apage_id.400138937513273%3Asrc.22%3Aphoto_id.1056160428214457%3Astory_location.5%3Aattached_story_attachment_style.photo%3Aview_time.1616568625%3Afilter.h_nor%3Atds_flgs.3%3Aott.AX-d_5XXMB9oGlqt&__tn__=%2As%2AsH-R"
@@ -103,7 +108,7 @@
             <a href="https://progress-ltc.netlify.app/" target="_blank" rel="noopener noreferrer">Google</a>
         </nav>
         <a href="#header">Back to top</a>
-        <p>&copy; Copyright
+        <p class="text-center">&copy; Copyright
             <span id="year"></span>
             Progress LTC</p>
     </div>
