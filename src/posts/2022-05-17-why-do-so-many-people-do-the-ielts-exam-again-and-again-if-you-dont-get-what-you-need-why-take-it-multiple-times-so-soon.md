@@ -6,9 +6,11 @@ description: In my experience of working with International students, there is a
   substantial minority of them who think of the IELTS test as being rather like
   throwing dice when playing a board game.
 date: 2022-05-13T03:45:37.613Z
-tags: featured
 image: /assets/posts/ielts-are-you-ready.jpg
 imageAlt: IELTS - Are you Ready?
+tags: featured
+tag:
+  - posts
 ---
 
 In my experience of working with International students, there is a substantial minority of them who think of the IELTS test as being rather like throwing dice when playing a board game.
