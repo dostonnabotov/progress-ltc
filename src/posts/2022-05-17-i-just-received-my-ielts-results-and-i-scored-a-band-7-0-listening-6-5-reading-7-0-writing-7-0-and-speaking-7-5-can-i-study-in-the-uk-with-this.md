@@ -6,10 +6,12 @@ description: Well, as an English qualification it would be fine, no problem at
   all. Most UK universities want a minimum of 6.5 overall, which is roughly
   equivalent to a decent GCSE English grade, so 7.0 is fine.
 date: 2022-05-14T11:53:33.492Z
-tags:
-  - posts
 image: /assets/posts/exam-ielts_test_for_uk.png
 imageAlt: IELTS for UK
+tags:
+  - posts
+tag:
+  - posts
 ---
 
 Well, as an English qualification it would be fine, no problem at all. Most UK universities want a minimum of 6.5 overall, which is roughly equivalent to a decent GCSE English grade, so 7.0 is fine.
