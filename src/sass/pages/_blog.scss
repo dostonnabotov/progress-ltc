@@ -3,32 +3,9 @@
 /* ============
     Blog
 ============ */
-.cards {
-  display: grid;
-  gap: 2rem;
-  margin-top: 2rem;
-
-  @include md("medium") {
-    grid-template-columns: repeat(2, 1fr);
+/* article
+============== */
+.article__title {
+    font-size: 2rem;
+    font-weight: 700;
   }
-}
-
-.card {
-  width: min(100%, 25rem);
-
-  margin: 2rem auto;
-  padding: 0.7rem;
-
-  border-radius: var(--br);
-  box-shadow: 0 0 7px -4px #333;
-
-  &__title > a {
-    color: var(--clr-primary);
-    text-decoration: none;
-
-    &:hover,
-    &:focus {
-      text-decoration: underline;
-    }
-  }
-}

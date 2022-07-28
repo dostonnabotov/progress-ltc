@@ -5,13 +5,10 @@
   box-sizing: border-box;
 }
 
-body,
-h1,
-h2,
-h3,
-h4,
-p {
+* {
   margin: 0;
+  padding: 0;
+  font: inherit;
 }
 
 ul[role="list"],
@@ -35,12 +32,6 @@ picture {
   display: block;
 }
 
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
@@ -60,17 +51,5 @@ select {
 
 a {
   color: inherit;
-
-  &:hover {
-    text-decoration: none;
-  }
-
-  &:focus {
-    color: var(--clr-primary);
-    text-decoration: none;
-  }
-}
-
-p + p {
-  margin-top: 1rem;
+  text-decoration: none;
 }

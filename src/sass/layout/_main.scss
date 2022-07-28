@@ -4,103 +4,12 @@
     Section
 ============ */
 section {
-  padding-block: 4rem;
-
-  & {
-    min-height: 100vh;
-  }
-}
-
-#welcome {
-  padding-block: 4rem;
+  padding-block: 2rem;
 }
 
 .section__title {
-  margin-block-start: 2rem;
-}
-
-.section__title--left {
-  text-align: left;
-  margin-bottom: 1rem;
-  color: var(--clr-primary);
-}
-
-/* ============
-    FAQ
-============ */
-#faq {
-  background-color: #f2f2f2;
-}
-details {
-  width: min(90%, 45rem);
-  margin: 0.8rem auto;
-}
-
-details > *:where(:not(:first-child)) {
-  padding-block-start: 1rem;
-}
-
-summary {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  padding: 0.7rem 0.8rem;
-
-  background-color: neutral(100);
-
-  cursor: pointer;
-  text-decoration: none;
-  list-style: none;
-
-  &:hover {
-    color: var(--clr-primary);
-  }
-
-  & i {
-    transition: transform 100ms ease-in-out;
-  }
-}
-
-details[open] summary {
-  font-weight: fw(700);
-
-  & i {
-    transform: rotate(-180deg);
-  }
-}
-
-/* ============
-    IELTS
-============ */
-.ielts__parts {
-  --gap: 2rem;
-  margin-block: 2rem;
   text-align: center;
-
-  @include md("medium") {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-.ielts__part {
-  width: min(100% - 1rem, 30rem);
-  margin-inline: auto;
-  height: 100%;
-  padding: 1rem 2rem;
-
-  background-color: neutral(100);
-
-  border-radius: var(--br);
-  border: 1px solid #f2f2f2;
-  transition: 0.3s;
-
-  &:hover {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  }
-
-  & > i {
-    color: var(--clr-primary);
-    font-size: 3rem;
-  }
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-transform: capitalize;
 }

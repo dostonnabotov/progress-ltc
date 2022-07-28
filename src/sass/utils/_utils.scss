@@ -1,16 +1,21 @@
 @use "../abstracts" as *;
+
+
+/* =============
+ * Composition
+============== */
 .container {
-  width: min(100% - 2rem, 70rem);
+  width: min(100% - 2rem, 56.25rem);
   margin-inline: auto;
 }
 
-.container--narrow {
-  width: min(100% - 2rem, 50rem);
+.container-sm {
+  width: min(100% - 2rem, 45rem);
   margin-inline: auto;
 }
 
 .flow > *:where(:not(:first-child)) {
-  margin-top: 1rem;
+  margin-top: var(--flow-spacer, 1rem);
 }
 
 .flex {
@@ -23,6 +28,9 @@
   gap: var(--gap, 1rem);
 }
 
+/* =============
+ * Utilities
+============== */
 .uppercase {
   text-transform: uppercase;
 }
@@ -31,6 +39,9 @@
   text-align: center;
 }
 
+/* =============
+ * Exceptions
+============== */
 .sr-only {
   position: absolute;
   width: 1px;

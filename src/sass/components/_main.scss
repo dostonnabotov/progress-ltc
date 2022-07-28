@@ -1,41 +1,117 @@
 @use "../abstracts" as *;
 
-/* section */
-.section {
-  &__title {
-    font-size: var(--fs-700);
-    text-align: center;
+/* posts
+============== */
+.posts {
+  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+  margin-block: 2rem;
+}
 
-    color: var(--clr-neutral-700);
+.post {
+  /* align-content: start; */
+  border-radius: .5rem;
+  background-color: #fff;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.post__img {
+  position: relative;
+}
+
+.img-loading::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  animation: loading 1s linear infinite forwards;
+  background-color: #eee;
+  background-image: linear-gradient(to right, #ececec 10%, #e6e4e4 18%, #eee 33%);
+  background-size: 600px 200px;
+  z-index: 1;
+}
+
+@keyframes loading {
+  0% {
+    background-position: -300px 0;
   }
 
-  &__subtitle {
-    font-size: fs(400);
-    text-align: center;
-
-    color: var(--clr-neutral-500);
+  100% {
+    background-position: 300px 0;
   }
 }
 
-.main__title {
-  margin-inline: auto;
-  font-size: fs(500);
-  position: relative;
+.post__img img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.post__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  /* align-content: start; */
+  padding: 1rem;
+}
+
+.post__meta {
+  color: #06f;
+  font-size: .8rem;
+  text-transform: capitalize;
+}
+
+.post__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.post__content {
+  flex-grow: 1;
+  margin-block: 1rem;
+  color: #444;
+  font-size: .9rem;
+}
+
+.post__more {
+  display: inline-block;
+  justify-content: flex-end;
+  text-transform: capitalize;
+  font-weight: 500;
   width: fit-content;
+  position: relative;
+  isolation: isolate;
+}
 
-  &--left {
-    margin-inline: unset;
+.post__more::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 4px;
+  height: 4px;
+  background-color: #06f;
+  opacity: .4;
+  border-radius: .5rem;
+  z-index: -1;
+}
+
+.post__more:hover::before {
+  opacity: .7;
+}
+
+@media (min-width: 50em) {
+  .post:nth-child(1) {
+    grid-column: span 3;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
   }
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 0;
-    bottom: 0;
-    right: 0;
-
-    height: 2px;
-    background-color: #333;
-  }
+  .post:nth-child(1) .post__body {
+    padding: 2rem;
+  } 
 }
