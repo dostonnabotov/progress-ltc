@@ -368,6 +368,7 @@ header {
     transition: transform 500ms ease-in-out;
     background-color: var(--neutral-100);
     overflow-y: auto;
+    z-index: 1000;
   }
 
   .primary-nav[data-visible=true] {
@@ -379,7 +380,7 @@ header {
     position: absolute;
     z-index: 2000;
     right: 2rem;
-    top: 1.5rem;
+    top: 1rem;
     background-color: transparent;
     background-position: center;
     background-image: url("/assets/menu.svg");
@@ -405,6 +406,12 @@ section {
   font-weight: 700;
   font-size: 1.5rem;
   text-transform: capitalize;
+}
+
+ul,
+ol {
+  list-style: outside;
+  padding-left: 1.5rem;
 }
 
 #footer {

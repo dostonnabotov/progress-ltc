@@ -7,7 +7,7 @@ layout: 'base.njk'
     <h2 class="article__title">{{ title }}</h2>
     <img src="{{ image }}" alt="{{ imageAlt }}">
     <p style="text-align: end">
-      <span>{{ date | postDate }}</span> / <span>Category</span>
+      <span>{{ date | postDate }}</span> / <span>{{ category }}</span>
     </p>
     <article class="flow">
       {{ content | safe }}
