@@ -2,6 +2,10 @@
 
 ## Changelog
 
+- version 1.1.2
+
+  - Introduced new layouts and design
+
 - version 1.1.1
 
   - Bug fixes and minor improvements

@@ -1,6 +1,5 @@
 @use "../abstracts" as *;
 
-
 /* =============
  * Composition
 ============== */
@@ -37,6 +36,14 @@
 
 .text-center {
   text-align: center;
+
+  &:is(h1, h2, h3, p, ul, li) {
+    margin-inline: auto;
+  }
+}
+
+:is(h1, h2, h3, p, ul, li).text-center {
+  margin-inline: auto;
 }
 
 /* =============
