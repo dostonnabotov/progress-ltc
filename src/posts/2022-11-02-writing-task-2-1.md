@@ -1,5 +1,5 @@
 ---
-title: Writing Task 2 (#1)
+title: Writing Task 2
 description: Some people say that if old people spend time, get along with
   others, and exercise everyday they will become fit. However, nowadays old
   people are usually alone and do not talk to others which make them unhappy and
