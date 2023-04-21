@@ -10,13 +10,14 @@ category:
 image: /assets/posts/pen-and-notebook.jpg
 imageAlt: Notebook and pen
 ---
+
 ### Writing Task 2
 
 Some people say that if old people spend time, get along with others, and exercise everyday they will become fit. However, nowadays old people are usually alone and do not talk to others which make them unhappy and unfit. Causes and solutions?
 
 ### Plan: Paraphrase + template
 
-lack of attention/ younger members are busy/ can’t spare enough time for lengthy conversation/ little common topics/ Don’t receive enough support/ most facilities are senior unfriendly  
+lack of attention/ younger members are busy/ can’t spare enough time for lengthy conversation/ little common topics/ Don’t receive enough support/ most facilities are senior unfriendly
 
 teach elderly IT skills/ most younger spend time socializing on the internet/ if old people are computer literate, they can enlarge their social circles/ authorities should set up sporting facilities designed for elderly use/ promote healthy life style through media involving older celebrities to emulate
 
