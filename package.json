@@ -5,10 +5,10 @@
   "main": "index.html",
   "scripts": {
     "watch:sass": "sass --watch src/sass:public/css",
-    "build:sass": "sass src/sass:dist/css",
+    "build:sass": "sass src/sass:public/css",
     "watch:eleventy": "eleventy --serve",
     "build:eleventy": "eleventy",
-    "build:postcss": "postcss dist/css/style.css --replace --no-map --use cssnano",
+    "build:postcss": "postcss public/css/style.css --replace --no-map --use cssnano",
     "format": "prettier --write .",
     "start": "npm-run-all build:sass --parallel watch:*",
     "build": "npm-run-all build:*"
