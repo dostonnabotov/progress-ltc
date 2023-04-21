@@ -5,7 +5,7 @@ layout: 'base.njk'
 
 <section>
   <div class="container">
-    <h2 class="section__title text-center">Featured Articles</h2>
+    <h2 class="section__title text-center">Latest Articles</h2>
     <div class="posts | grid">
       {% for post in collections.posts | reverse %}
         {% include 'article-snippet.njk' %}

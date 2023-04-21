@@ -1,11 +1,3 @@
-const img = document.querySelectorAll('.post__img');
-
-window.addEventListener('load', () => {
-  [...img].forEach(el => {
-    el.classList.remove('img-loading');
-  });
-});
-
 const nav = document.querySelector(".primary-nav");
 const navToggle = document.querySelector(".mobile-nav-toggle");
 

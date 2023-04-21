@@ -1,18 +1,6 @@
-<div class="post">
-  <div class="post__img | img-loading">
-    <img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" />
-  </div>
-  <div class="post__body">
-    <p class="post__meta">
-      <span>{{ post.data.date | postDate }}</span> /
-      <span>{{ post.data.category }}</span>
-    </p>
-    <h3 class="post__title">
-      <a href="{{ post.url }}">{{ post.data.title }}</a>
-    </h3>
-    <div class="post__content">
-      <p>{{ post.data.description }}</p>
-    </div>
-    <a href="{{ post.url }}" class="post__more">Read more</a>
-  </div>
-</div>
+<article class="post flow">
+  <h3 class="post__title">{{ post.data.title }}</h3>
+  <p class="post__date">Updated on <span>{{ post.data.date | postDate }}</span></p>
+  <p class="post__description">{{ post.data.description }}</p>
+  <a href="{{ post.url }}" class="post__cta">Read more</a>
+</article>
