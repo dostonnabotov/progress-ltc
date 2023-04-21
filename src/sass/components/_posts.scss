@@ -1,0 +1,48 @@
+.posts {
+  padding-block: 1rem;
+}
+
+.post__title:is(:hover, :focus-within) {
+  text-decoration: 2px underline;
+  text-underline-offset: 0.1em;
+}
+
+.post__date {
+  font-size: var(--fs-300);
+  letter-spacing: 0.05em;
+  background-color: rgba(#000, 0.1);
+  width: fit-content;
+  padding: 0.25em 0.75em;
+  border-radius: 0.5em;
+}
+
+.post__cta {
+  --_transition: 250ms ease;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-self: start;
+  gap: 0.35em;
+
+  color: inherit;
+  font-weight: 700;
+  text-decoration: none;
+
+  transition: var(--_transition);
+}
+
+.post__cta:is(:hover, :focus) {
+  color: red;
+}
+
+.post__cta::after {
+  content: "➜";
+  color: inherit;
+  opacity: 0;
+  transition: var(--_transition);
+}
+
+.post__cta:is(:hover, :focus)::after {
+  opacity: 1;
+  transform: translateX(5px);
+}

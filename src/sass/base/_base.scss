@@ -1,10 +1,15 @@
 body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
   min-height: 100vh;
   font-family: var(--ff-primary);
+  font-size: var(--fs-400);
+
+  color: #333;
+  background-color: #f1f1f1;
 }
 
-h1,
-h2,
-h3 {
-  font-family: var(--ff-secondary);
+::selection {
+  background-color: #e31837;
+  color: #fff;
 }

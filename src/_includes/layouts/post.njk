@@ -1,6 +1,8 @@
 <li class="post-wrapper">
   <article class="post grid-flow">
-    <h3 class="post__title">{{ post.data.title }}</h3>
+    <h3 class="post__title">
+      <a href="{{ post.url }}" role="link">{{ post.data.title }}</a>
+    </h3>
     <p class="post__date">Updated on <span>{{ post.data.date | postDate }}</span></p>
     <p class="post__description">{{ post.data.description }}</p>
     <a href="{{ post.url }}" class="post__cta">Read more</a>

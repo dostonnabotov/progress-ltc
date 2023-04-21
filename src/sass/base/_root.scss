@@ -1,4 +1,16 @@
 :root {
+  /// @see https://utopia.fyi/type/calculator
+  --fs-300: clamp(0.8rem, calc(0.84rem + -0.06vw), 0.83rem);
+  --fs-400: clamp(1rem, calc(1rem + 0vw), 1rem);
+  --fs-500: clamp(1.2rem, calc(1.18rem + 0.09vw), 1.25rem);
+  --fs-600: clamp(1.44rem, calc(1.4rem + 0.21vw), 1.56rem);
+  --fs-700: clamp(1.73rem, calc(1.65rem + 0.39vw), 1.95rem);
+  --fs-800: clamp(2.07rem, calc(1.95rem + 0.64vw), 2.44rem);
+  --fs-900: clamp(2.49rem, calc(2.29rem + 0.98vw), 3.05rem);
+
   --ff-primary: "Roboto", sans-serif;
   --ff-secondary: "Merriweather", serif;
+
+  --fw-bold: 700;
+  --fw-regular: 400;
 }

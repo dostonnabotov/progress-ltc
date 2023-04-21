@@ -20,11 +20,16 @@ blockquote {
   margin: 0;
 }
 
-ul[role="list"],
-ol[role="list"] {
+ul:where([role="list"]),
+ol:where([role="list"]) {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+a:where([role="link"]) {
+  color: inherit;
+  text-decoration: none;
 }
 
 img,

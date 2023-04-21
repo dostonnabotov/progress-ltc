@@ -1,0 +1,10 @@
+.flex-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.flex-group[data-spacing="large"] {
+  gap: 2rem;
+}
