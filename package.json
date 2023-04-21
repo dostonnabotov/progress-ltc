@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "watch:sass": "sass --watch src/sass:public/css",
-    "build:sass": "sass src/sass:public/css",
+    "build:sass": "sass src/sass:dist/css",
     "watch:eleventy": "eleventy --serve",
     "build:eleventy": "eleventy",
     "build:postcss": "postcss dist/css/style.css --replace --no-map --use cssnano",
