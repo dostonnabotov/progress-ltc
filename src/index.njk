@@ -1,6 +1,6 @@
 ---
 title: Progress LTC
-layout: 'base.njk'
+layout: 'layouts/base.njk'
 ---
 
 <section>
@@ -8,7 +8,7 @@ layout: 'base.njk'
     <h2 class="section__title text-center">Latest Articles</h2>
     <div class="posts | grid">
       {% for post in collections.posts | reverse %}
-        {% include 'article-snippet.njk' %}
+        {% include 'layouts/post.njk' %}
       {% endfor %}
     </div>
   </div>
